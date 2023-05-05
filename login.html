@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="result.css" />
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <h2 class="logo"><ion-icon name="school-outline"></ion-icon></h2>
+        <nav class="nav">
+          <a href="#">HOME</a>
+          <a href="result.html">RESULT</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
+          <button class="btnlogin">Login</button>
+        </nav>
+      </header>
+      <div class="welcome">
+        <h1>Welcome to My College</h1>
+      </div>
+      <div class="wrapper">
+        <span class="icon-close"
+          ><ion-icon name="close-outline"></ion-icon
+        ></span>
+        <div class="form">
+          <h2>Login</h2>
+          <!-- <form > -->
+            <form action="#" name="myform" method="post" onsubmit="return validateform()">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" name="mail" required />
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" name="password" required />
+              <label>Password</label>
+            </div>
+            <div class="remember">
+              <label><input type="checkbox" />Remember me</label>
+              <a href="#">Forget Password?</a>
+            </div>
+            <a href="http://192.168.1.13:5500/project/result.html">
+              <button
+                type="submit"
+                class="btn"
+                onclick="location.href ='result.html'"
+              >
+                Login
+              </button>
+            </a>
+            <div class="login-reg">
+              <p>
+                Dont have a account?
+                <a href="#" class="reg-link">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-reg">
+          <h2>Registration</h2>
+          <form
+            action="#"
+            name="myform"
+            method="get"
+            onsubmit="return validateform()"
+          >
+            <div class="input-box">
+              <span class="icon"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span>
+              <input type="text" name="name" required />
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" name="mail" required />
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" name="password" required />
+              <label>Password</label>
+            </div>
+            <div class="remember">
+              <label
+                ><input type="checkbox" />I agree to the Terms &
+                Conditions</label
+              >
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-reg">
+              <p>
+                Already have a account?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
+    <script src="result.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

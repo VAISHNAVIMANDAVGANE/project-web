@@ -1,0 +1,340 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.welcome{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: 20% 30%;
+    text-align: center;
+    color: rgb(176, 27, 27);
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.home{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://media.istockphoto.com/id/1307239375/vector/education-scene-happy-students-sitting-on-summer-park-green-grass-together-studying.jpg?s=612x612&w=0&k=20&c=L737nRly2_hs4hf8iygr2vZUPtEN7fEuxUFkbqzK12g=);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    font-size: 6em;
+    color: rgb(17, 18, 8);
+    user-select: none;
+}
+nav a{
+    position: relative;
+    font-size: 1em;
+    color: rgb(27, 16, 51);
+    text-decoration: none;
+    font-weight: 500 ;
+    margin-left: 40px;
+}
+.nav .btnlogin{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(25, 43, 59);
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.nav .btnlogin:hover{
+    background-color: brown ;
+    color: rgb(219, 209, 203);
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 520px;
+}
+
+.wrapper .form{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .form{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form{
+transition: none;
+transform: translateX(-400px);
+
+}
+.wrapper .form-reg{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-reg{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(16, 8, 8, 0.745);
+    font-size: 2em;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form h2{
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.81);
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgba(165, 42, 42, 0.271);
+    margin: 30px 0;
+    
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgba(18, 3, 3, 0.795);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.751);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+.remember{
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.66);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember label input{
+    accent-color: rgba(15, 12, 12, 0.884);
+    margin-right: 3px;
+}
+.remember a{
+    color: rgba(7, 5, 5, 0.785);
+    text-decoration: none;
+}
+.remember a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: rgba(26, 6, 6, 0.636);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 500;
+
+}
+.login-reg{
+    font-size: .9em;
+    color: rgba(15, 5, 5, 0.734);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-reg p a{
+    color: rgba(14, 7, 7, 0.734);
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-reg p a:hover{
+    text-decoration: underline;
+}
+
+.about{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-vector/student-character-vector-people-with-books-backpacks_507816-667.jpg?w=2000);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.ab{
+    position: absolute;
+    width: 100%;
+    color: #0e0606;
+    line-height: 40px;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    bottom:0;
+    left: 0;
+    right: 0;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.abc{
+    position: absolute;
+    width: 100%;
+    color: #110e0e;
+    line-height: 30px;
+    font-size: 1em;
+    font-weight: 500;
+    /* text-align: center; */
+    bottom:15%;
+    /* margin: 20px; */
+    height: 130px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+    display: flex;
+    background-color: bisque;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://www.workitdaily.com/media-library/college-student-carries-books-to-her-classes.jpg?id=26951082&width=2000&height=1500&quality=85&coordinates=100%2C0%2C0%2C0);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+#in{
+    width: 18rem;
+    height: 18rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    margin: 6% auto;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color:rgba(91, 91, 143, 0.77);
+    padding: 8px;
+    color: aliceblue;
+    text-align: center;
+}
+
+p{
+    margin-top: 15px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
